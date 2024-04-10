@@ -9,7 +9,7 @@ from conversation import get_default_conv_template
 #tokenizer = AutoTokenizer.from_pretrained("GeneZC/MiniChat-3B")
 #model = AutoModelForCausalLM.from_pretrained("GeneZC/MiniChat-3B", torch_dtype=torch.float16)
 
-
+print(torch.cuda.is_available())
 
 tokenizer = AutoTokenizer.from_pretrained("GeneZC/MiniChat-3B", use_fast=False)
 model = AutoModelForCausalLM.from_pretrained("GeneZC/MiniChat-3B", use_cache=True, torch_dtype=torch.float16,device_map={'': 0})
